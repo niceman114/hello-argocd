@@ -6,14 +6,14 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      run: mynginx
+      run: mynginx-pod
   template:
     metadata:
       labels:
-        run: mynginx
+        run: mynginx-pod
     spec:
       containers:
       - image: nginx
-        name: mynginx
+        name: nginx
         ports:
           - containerPort: 80
